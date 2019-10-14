@@ -12,13 +12,17 @@ public class MyFirstProgram {
         Rectangle r = new Rectangle(4, 6);
         System.out.println("Площадь прямоугольника a и b " + r.a + " и " + r.b + " = " + r.area());
 
+        //Формула AB = корень(AC^2 + BC^2), т.е. получается у нас 2 точки с (x1,y1) и (x2,y2)
+        //Вариант 1
+
         Point p1 = new Point();
         Point p2 = new Point();
         p1.p1 = 3;
         p2.p2 = 6;
-        System.out.println(distance(p1, p2));
+        System.out.println(Math.sqrt(distance(p1, p2) + distance(p1, p2)));
 
-        //Формула AB = корень(AC^2 + BC^2), т.е. получается у нас 2 точки с (x1,y1) и (x2,y2)
+        //Вариант 2
+
         PointStart x1 = new PointStart();
         PointStart x2 = new PointStart();
         PointEnd y1 = new PointEnd();
@@ -33,12 +37,7 @@ public class MyFirstProgram {
     }
     public static double distance(Point p1, Point p2)
     {
-        return Math.sqrt((p2.p2 + p1.p1));
-    }
-
-    public static void hello(String somebody)
-    {
-        System.out.println("Hello, " + somebody + "!");
+        return Math.pow((p2.p2 - p1.p1), 2);
     }
 
     public static double x2x1(PointStart x1, PointStart x2)
@@ -49,5 +48,10 @@ public class MyFirstProgram {
     public static double y2y1(PointEnd y1, PointEnd y2)
     {
         return Math.pow((y2.y2 - y1.y1), 2);
+    }
+
+    public static void hello(String somebody)
+    {
+        System.out.println("Hello, " + somebody + "!");
     }
 }
