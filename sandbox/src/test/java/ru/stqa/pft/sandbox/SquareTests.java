@@ -13,6 +13,8 @@ public class SquareTests
 
         Point p1 = new Point(1,5);
         Point p2 = new Point(3,4);
+        Point p3 = new Point(0,0);
+        assert p3 != p1 & p3 != p2;
         assert 0 < distance(p1,p2);
         assert 1000 > distance(p1,p2);
     }
