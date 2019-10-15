@@ -11,8 +11,17 @@ public class Point
         this.y = y;
     }
 
-    public double distance()
+    public double getX()
     {
-        return Math.pow((this.x - this.y), 2);
+        return x;
     }
+    public double getY()
+    {
+        return y;
+    }
+
+    /*public double distance()
+    {
+        return Math.pow((getY() - getX()), 2);
+    }*/
 }
