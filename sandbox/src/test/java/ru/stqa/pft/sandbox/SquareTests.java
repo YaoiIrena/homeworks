@@ -15,12 +15,8 @@ public class SquareTests
         Point p2 = new Point(3,4);
         Point p3 = new Point(0,0);
         assert p3 != p1 & p3 != p2;
-        assert 0 < distance(p1,p2);
-        assert 1000 > distance(p1,p2);
+        assert 0 < p1.distance(p2);
+        assert 1000 > p1.distance(p2);
     }
 
-    private double distance(Point p1, Point p2)
-    {
-        return Math.sqrt(Math.pow((p2.getX() - p1.getX()), 2) + Math.pow((p2.getY() - p1.getY()), 2));
-    }
 }
