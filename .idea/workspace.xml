@@ -97,7 +97,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.KontaktCreationTests">
+  <component name="RunManager">
     <configuration name="MyFirstProgram" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="C:/Program Files/Java/jdk1.8.0_221" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -191,7 +191,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KontaktCreationTests" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="KontactCreationTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
         <pattern>
@@ -200,7 +200,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.KontaktCreationTests" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.KontactCreationTests" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -248,11 +248,11 @@
       <item itemvalue="TestNG.SquareTests" />
       <item itemvalue="TestNG.GroupCreationTests" />
       <item itemvalue="TestNG.PointTests" />
-      <item itemvalue="TestNG.KontaktCreationTests" />
+      <item itemvalue="TestNG.KontactCreationTests" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.KontaktCreationTests" />
+        <item itemvalue="TestNG.KontactCreationTests" />
         <item itemvalue="TestNG.GroupCreationTests" />
         <item itemvalue="TestNG.PointTests" />
         <item itemvalue="Gradle.GroupCreationTests" />
