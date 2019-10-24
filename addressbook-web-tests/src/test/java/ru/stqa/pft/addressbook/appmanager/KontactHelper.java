@@ -64,4 +64,12 @@ public class KontactHelper extends HelperBase {
            acceptNextAlert = true;
         }
     }
+
+    public void initKontactModification() {
+        click(By.xpath("//img[@alt='Edit']"));
+    }
+
+    public void submitKontactModification() {
+        click(By.xpath("(//input[@name='update'])[2]"));
+    }
 }
