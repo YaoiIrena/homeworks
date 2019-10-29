@@ -2,7 +2,10 @@ package ru.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import ru.stqa.pft.addressbook.model.KontactData;
 
 public class KontactHelper extends HelperBase {
@@ -16,7 +19,7 @@ public class KontactHelper extends HelperBase {
       click(By.xpath("(//input[@name='submit'])[2]"));
     }
 
-    public void fillKontactForm(KontactData kontactData) {
+    public void fillKontactForm(KontactData kontactData, boolean creation) {
       type(By.name("firstname"), kontactData.getFirstname());
       type(By.name("lastname"), kontactData.getLastname());
       type(By.name("address"), kontactData.getAddress());
@@ -27,6 +30,14 @@ public class KontactHelper extends HelperBase {
       type(By.name("email"), kontactData.getEmail());
       type(By.name("email2"), kontactData.getEmail2());
       type(By.name("email3"), kontactData.getEmail3());
+
+      if (creation)
+      {
+          new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(kontactData.getGroup());
+      } else
+      {
+          Assert.assertFalse(isElementPresent(By.name("new_group")));
+      }
     }
 
     public void returnToHomePage() {

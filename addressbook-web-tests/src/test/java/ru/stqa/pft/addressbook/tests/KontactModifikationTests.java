@@ -11,7 +11,7 @@ public class KontactModifikationTests extends TestBase
         app.getKontactHelper().selectKontact();
         app.getKontactHelper().initKontactModification();
         app.getKontactHelper().fillKontactForm(new KontactData("test11", "test21", "test31",
-                "+71234516", "+7131467", "+721456", "+756718", "e11@mail.ru", "e112@mail.ru", "e311@mail.ru"));
+                "+71234516", "+7131467", "+721456", "+756718", "e11@mail.ru", "e112@mail.ru", "e311@mail.ru", null), false);
         app.getKontactHelper().submitKontactModification();
         app.getKontactHelper().returnToHomePage();
     }
