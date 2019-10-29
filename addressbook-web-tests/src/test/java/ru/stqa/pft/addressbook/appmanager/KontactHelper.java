@@ -87,4 +87,16 @@ public class KontactHelper extends HelperBase {
     public void submitKontactModification() {
         click(By.xpath("(//input[@name='update'])[2]"));
     }
+
+    public void createKontact(KontactData kontact, boolean creation)
+    {
+        goToNewKontact();
+        fillKontactForm(kontact, creation);
+        submitKontactCreation();
+        returnToHomePage();
+    }
+
+    public boolean isThereKontact() {
+        return isElementPresent(By.name("selected[]"));
+    }
 }
