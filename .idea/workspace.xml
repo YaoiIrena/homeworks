@@ -248,8 +248,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.GroupModificaitionTests.testGroupModificaition" />
-        <item itemvalue="TestNG.GroupDeletionTests.testGroupDeletion" />
         <item itemvalue="TestNG.GroupCreationTests.testGroupCreation" />
+        <item itemvalue="TestNG.GroupDeletionTests.testGroupDeletion" />
         <item itemvalue="Application.Collections" />
         <item itemvalue="TestNG.KontactModifikationTests" />
       </list>
