@@ -58,7 +58,6 @@ public class KontactHelper extends HelperBase {
 
     public void selectKontact(int index) {
       wd.findElements(By.name("selected[]")).get(index).click();
-      click(By.name("selected[]"));
     }
 
     public String deleteTrue() {
