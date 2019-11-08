@@ -56,7 +56,8 @@ public class KontactHelper extends HelperBase {
       click(By.xpath("//input[@value='Delete']"));
     }
 
-    public void selectKontact() {
+    public void selectKontact(int index) {
+      wd.findElements(By.name("selected[]")).get(index).click();
       click(By.name("selected[]"));
     }
 

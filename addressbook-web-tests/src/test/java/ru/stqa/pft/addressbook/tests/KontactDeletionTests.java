@@ -12,9 +12,9 @@ public class KontactDeletionTests extends TestBase {
   if (! app.getKontactHelper().isThereKontact())
   {
     app.getKontactHelper().createKontact(new KontactData("test1", "test2", "test3",
-            "+7123456", "+713467", "+72456", "+75678", "e@mail.ru", "e2@mail.ru", "e3@mail.ru", "test3"), true);
+            "+7123456", "+713467", "+72456", "+75678", "e@mail.ru", "e2@mail.ru", "e3@mail.ru", "test1"), true);
   }
-  app.getKontactHelper().selectKontact();
+  app.getKontactHelper().selectKontact(before - 1);
   app.getKontactHelper().deleteKontact();
   app.getKontactHelper().deleteTrue();
   app.getKontactHelper().returnToHomePage();
