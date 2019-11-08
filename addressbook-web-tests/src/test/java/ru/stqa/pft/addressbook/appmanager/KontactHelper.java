@@ -45,7 +45,7 @@ public class KontactHelper extends HelperBase {
         {
             return;
         }
-        click(By.linkText("home page"));
+        click(By.linkText("home"));
     }
 
     public void goToNewKontact() {
@@ -98,5 +98,9 @@ public class KontactHelper extends HelperBase {
 
     public boolean isThereKontact() {
         return isElementPresent(By.name("selected[]"));
+    }
+
+    public int getKontaktCount() {
+        return wd.findElements(By.name("selected[]")).size();
     }
 }

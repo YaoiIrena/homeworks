@@ -1,5 +1,6 @@
 package ru.stqa.pft.addressbook.tests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.KontactData;
 
@@ -8,6 +9,7 @@ public class KontactModifikationTests extends TestBase
     @Test
     public void testKontactModification()
     {
+        int before = app.getKontactHelper().getKontaktCount();
         if (! app.getKontactHelper().isThereKontact())
         {
             app.getKontactHelper().createKontact(new KontactData("test1", "test2", "test3",
@@ -19,5 +21,7 @@ public class KontactModifikationTests extends TestBase
                 "+71234516", "+7131467", "+721456", "+756718", "e11@mail.ru", "e112@mail.ru", "e311@mail.ru", null), false);
         app.getKontactHelper().submitKontactModification();
         app.getKontactHelper().returnToHomePage();
+        int after = app.getKontactHelper().getKontaktCount();
+        Assert.assertEquals(after, before);
     }
 }
