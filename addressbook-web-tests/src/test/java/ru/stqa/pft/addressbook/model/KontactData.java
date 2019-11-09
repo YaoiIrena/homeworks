@@ -3,7 +3,7 @@ package ru.stqa.pft.addressbook.model;
 import java.util.Objects;
 
 public class KontactData {
-    private final String id;
+    private int id;
     private final String firstname;
     private final String lastname;
     private final String address;
@@ -17,7 +17,7 @@ public class KontactData {
     private String group;
 
     public KontactData(String firstname, String lastname, String address, String home, String mobile, String work, String fax, String email, String email2, String email3, String group) {
-        this.id = null;
+        this.id = 0;
         this.firstname = firstname;
         this.lastname = lastname;
         this.address = address;
@@ -31,7 +31,7 @@ public class KontactData {
         this.group = group;
     }
 
-    public KontactData(String id, String firstname, String lastname, String address, String home, String mobile, String work, String fax, String email, String email2, String email3, String group) {
+    public KontactData(int id, String firstname, String lastname, String address, String home, String mobile, String work, String fax, String email, String email2, String email3, String group) {
         this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
@@ -46,7 +46,9 @@ public class KontactData {
         this.group = group;
     }
 
-    public String getId() {return id; }
+    public void setId(int id) {this.id = id;}
+
+    public int getId() {return id; }
 
     public String getFirstname() {
         return firstname;
@@ -106,7 +108,7 @@ public class KontactData {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         KontactData that = (KontactData) o;
-        return Objects.equals(id, that.id) &&
+        return id == that.id &&
                 Objects.equals(firstname, that.firstname) &&
                 Objects.equals(lastname, that.lastname);
     }
@@ -115,4 +117,5 @@ public class KontactData {
     public int hashCode() {
         return Objects.hash(id, firstname, lastname);
     }
+
 }
