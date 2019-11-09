@@ -96,7 +96,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.KontactModifikationTests.testKontactModification">
+  <component name="RunManager" selected="TestNG.KontactDeletionTests.testKontactDeletion">
     <configuration name="MyFirstProgram" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="C:/Program Files/Java/jdk1.8.0_221" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -253,9 +253,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.KontactModifikationTests.testKontactModification" />
-        <item itemvalue="TestNG.KontactCreationTests.testKontactCreation" />
         <item itemvalue="TestNG.KontactDeletionTests.testKontactDeletion" />
+        <item itemvalue="TestNG.KontactCreationTests.testKontactCreation" />
+        <item itemvalue="TestNG.KontactModifikationTests.testKontactModification" />
         <item itemvalue="TestNG.GroupDeletionTests.testGroupDeletion" />
         <item itemvalue="TestNG.GroupCreationTests.testGroupCreation" />
       </list>
