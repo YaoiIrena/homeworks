@@ -1,12 +1,13 @@
 package ru.stqa.pft.addressbook.appmanager;
 
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import ru.stqa.pft.addressbook.model.GroupData;
 import ru.stqa.pft.addressbook.model.KontactData;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class KontactHelper extends HelperBase {
     private boolean acceptNextAlert;
@@ -102,5 +103,17 @@ public class KontactHelper extends HelperBase {
 
     public int getKontaktCount() {
         return wd.findElements(By.name("selected[]")).size();
+    }
+
+    public List<KontactData> getKontaktList() {
+        List<KontactData> contacts = new ArrayList<KontactData>();
+        List<WebElement> elements = wd.findElements(By.xpath("//tr[@name='entry']"));
+        for (WebElement element : elements) {
+            String firstname = element.findElement(By.xpath("//td[3]")).getText();
+            KontactData contact = new KontactData(firstname, null, null, null, null,
+                    null, null, null, null, null, null);
+            contacts.add(contact);
+        }
+        return contacts;
     }
 }
