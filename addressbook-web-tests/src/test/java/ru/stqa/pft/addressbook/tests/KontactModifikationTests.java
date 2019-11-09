@@ -4,6 +4,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.KontactData;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 
@@ -20,7 +22,7 @@ public class KontactModifikationTests extends TestBase
         List<KontactData> before = app.getKontactHelper().getKontaktList();
         app.getKontactHelper().selectKontact(before.size() - 1); //модификация последней группы
         app.getKontactHelper().initKontactModification();
-        KontactData contact = new KontactData(before.get(before.size() - 1).getId(),"test", "test343", "test31333",
+        KontactData contact = new KontactData(before.get(before.size() - 1).getId(),"test0", "test343", "test31333",
                 "+71234516", "+7131467", "+721456", "+756718", "e11@mail.ru", "e112@mail.ru", "e311@mail.ru", null);
         app.getKontactHelper().fillKontactForm(contact, false);
         app.getKontactHelper().submitKontactModification();
@@ -30,6 +32,9 @@ public class KontactModifikationTests extends TestBase
 
         before.remove(before.size() - 1);
         before.add(contact);
-        Assert.assertEquals(new HashSet<>(before), new HashSet<>(after));
+        Comparator<? super KontactData> byId = (g1, g2) -> Integer.compare(g1.getId(), g2.getId());
+        before.sort(byId);
+        after.sort(byId);
+        Assert.assertEquals(before, after);
     }
 }

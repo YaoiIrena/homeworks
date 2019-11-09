@@ -17,7 +17,7 @@ public class KontactData {
     private String group;
 
     public KontactData(String firstname, String lastname, String address, String home, String mobile, String work, String fax, String email, String email2, String email3, String group) {
-        this.id = 0;
+        this.id = Integer.MAX_VALUE;
         this.firstname = firstname;
         this.lastname = lastname;
         this.address = address;
@@ -108,14 +108,13 @@ public class KontactData {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         KontactData that = (KontactData) o;
-        return id == that.id &&
-                Objects.equals(firstname, that.firstname) &&
+        return Objects.equals(firstname, that.firstname) &&
                 Objects.equals(lastname, that.lastname);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, firstname, lastname);
+        return Objects.hash(firstname, lastname);
     }
 
 }
