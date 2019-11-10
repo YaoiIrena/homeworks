@@ -20,8 +20,8 @@ public class KontactModifikationTests extends TestBase
                     "+7123456", "+713467", "+72456", "+75678", "e@mail.ru", "e2@mail.ru", "e3@mail.ru", "test1"), true);
         }
         List<KontactData> before = app.getKontactHelper().getKontaktList();
-        app.getKontactHelper().selectKontact(before.size() - 1); //модификация последней группы
-        app.getKontactHelper().initKontactModification();
+        app.getKontactHelper().selectKontact(before.size() - 1);
+        app.getKontactHelper().initKontactModification(before.size() - 1); //модификация последней группы
         KontactData contact = new KontactData(before.get(before.size() - 1).getId(),"test0", "test343", "test31333",
                 "+71234516", "+7131467", "+721456", "+756718", "e11@mail.ru", "e112@mail.ru", "e311@mail.ru", null);
         app.getKontactHelper().fillKontactForm(contact, false);
