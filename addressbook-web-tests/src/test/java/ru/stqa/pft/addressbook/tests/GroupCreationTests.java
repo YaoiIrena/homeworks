@@ -5,7 +5,6 @@ import org.testng.annotations.*;
 import ru.stqa.pft.addressbook.model.GroupData;
 
 import java.util.Comparator;
-import java.util.HashSet;
 import java.util.List;
 
 public class GroupCreationTests extends TestBase {
@@ -21,7 +20,7 @@ public class GroupCreationTests extends TestBase {
     //int after = app.getGroupHelper().getGroupCount();
     Assert.assertEquals(after.size(), before.size() + 1);
 
-    //список - поток, в потоке сравниваются объекты и выбирается max, после берется
+    //список - поток, в потоке сравниваются объекты и выбирается max, после берется ID
     group.setId(after.stream().max((o1, o2) -> Integer.compare(o1.getId(), o2.getId())).get().getId());
     before.add(group);
     Comparator<? super GroupData> byId = (g1, g2) -> Integer.compare(g1.getId(), g2.getId());
