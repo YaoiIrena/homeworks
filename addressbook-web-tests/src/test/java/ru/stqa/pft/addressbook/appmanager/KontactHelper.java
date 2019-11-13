@@ -89,7 +89,7 @@ public class KontactHelper extends HelperBase {
         click(By.xpath("(//input[@name='update'])[2]"));
     }
 
-    public void createKontact(KontactData kontact, boolean creation)
+    public void create(KontactData kontact, boolean creation)
     {
         goToNewKontact();
         fillKontactForm(kontact, creation);
@@ -97,11 +97,18 @@ public class KontactHelper extends HelperBase {
         returnToHomePage();
     }
 
-    public void modifyContact(int index, KontactData contact) {
+    public void modify(int index, KontactData contact) {
         selectKontact(index);
         initKontactModification(index); //модификация последней группы
         fillKontactForm(contact, false);
         submitKontactModification();
+        returnToHomePage();
+    }
+
+    public void delete(int index) {
+        selectKontact(index);
+        deleteKontact();
+        deleteTrue();
         returnToHomePage();
     }
 
@@ -113,7 +120,7 @@ public class KontactHelper extends HelperBase {
         return wd.findElements(By.name("selected[]")).size();
     }
 
-    public List<KontactData> getKontaktList() {
+    public List<KontactData> list() {
         List<KontactData> contacts = new ArrayList<KontactData>();
         List<WebElement> elements = wd.findElements(By.xpath("//tr[@name='entry']"));
         for (WebElement element : elements) {

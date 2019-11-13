@@ -11,8 +11,8 @@ public class KontactModifikationTests extends TestBase
 {
     @BeforeMethod
     public void ensurePreconditions() {
-        if (!app.getKontactHelper().isThereKontact()) {
-            app.getKontactHelper().createKontact(new KontactData("test1", "test2", "test3",
+        if (app.contact().list().size() == 0) {
+            app.contact().create(new KontactData("test1", "test2", "test3",
                     "+7123456", "+713467", "+72456", "+75678", "e@mail.ru", "e2@mail.ru", "e3@mail.ru", "test1"), true);
         }
     }
@@ -20,12 +20,12 @@ public class KontactModifikationTests extends TestBase
     @Test
     public void testKontactModification()
     {
-        List<KontactData> before = app.getKontactHelper().getKontaktList();
+        List<KontactData> before = app.contact().list();
         int index = before.size() - 1;
         KontactData contact = new KontactData(before.get(index).getId(),"test0", "test343", "test31333",
                 "+71234516", "+7131467", "+721456", "+756718", "e11@mail.ru", "e112@mail.ru", "e311@mail.ru", null);
-        app.getKontactHelper().modifyContact(index, contact);
-        List<KontactData> after = app.getKontactHelper().getKontaktList();
+        app.contact().modify(index, contact);
+        List<KontactData> after = app.contact().list();
         Assert.assertEquals(after.size(), before.size());
 
         before.remove(index);

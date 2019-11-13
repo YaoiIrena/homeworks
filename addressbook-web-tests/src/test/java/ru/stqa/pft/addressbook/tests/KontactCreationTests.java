@@ -11,11 +11,11 @@ public class KontactCreationTests extends TestBase {
 
   @Test
   public void testKontactCreation() throws Exception {
-    List<KontactData> before = app.getKontactHelper().getKontaktList();
+    List<KontactData> before = app.contact().list();
     KontactData contact = new KontactData("test1", "test2", "test3",
-            "+7123456", "+713467", "+72456", "+75678", "e@mail.ru", "e2@mail.ru", "e3@mail.ru", "test1");
-    app.getKontactHelper().createKontact(contact, true);
-    List<KontactData> after = app.getKontactHelper().getKontaktList();
+            "+7123456", "+713467", "+72456", "+75678", "e@mail.ru", "e2@mail.ru", "e3@mail.ru", "1");
+    app.contact().create(contact, true);
+    List<KontactData> after = app.contact().list();
     Assert.assertEquals(after.size(), before.size() + 1);
 
     before.add(contact);
