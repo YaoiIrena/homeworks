@@ -97,6 +97,14 @@ public class KontactHelper extends HelperBase {
         returnToHomePage();
     }
 
+    public void modifyContact(int index, KontactData contact) {
+        selectKontact(index);
+        initKontactModification(index); //модификация последней группы
+        fillKontactForm(contact, false);
+        submitKontactModification();
+        returnToHomePage();
+    }
+
     public boolean isThereKontact() {
         return isElementPresent(By.name("selected[]"));
     }
