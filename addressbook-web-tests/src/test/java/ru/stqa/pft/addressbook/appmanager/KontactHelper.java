@@ -84,6 +84,7 @@ public class KontactHelper extends HelperBase {
         finally
         {
            acceptNextAlert = true;
+           wd.findElement(By.cssSelector("div.msgbox"));
         }
     }
 
