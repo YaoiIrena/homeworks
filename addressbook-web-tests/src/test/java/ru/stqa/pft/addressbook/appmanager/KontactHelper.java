@@ -7,7 +7,9 @@ import ru.stqa.pft.addressbook.model.GroupData;
 import ru.stqa.pft.addressbook.model.KontactData;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class KontactHelper extends HelperBase {
     private boolean acceptNextAlert;
@@ -58,7 +60,11 @@ public class KontactHelper extends HelperBase {
     }
 
     public void selectKontact(int index) {
-      wd.findElements(By.name("selected[]")).get(index).click();
+        wd.findElements(By.name("selected[]")).get(index).click();
+    }
+
+    public void selectKontactById(int id) {
+        wd.findElement(By.cssSelector("input[value='" + id + "']")).click();
     }
 
     public String deleteTrue() {
@@ -81,8 +87,8 @@ public class KontactHelper extends HelperBase {
         }
     }
 
-    public void initKontactModification(int index) {
-        wd.findElements(By.xpath("//img[@alt='Edit']")).get(index).click();
+    public void initKontactModification() {
+        wd.findElement(By.cssSelector("img[alt=\"Edit\"]")).click();
     }
 
     public void submitKontactModification() {
@@ -97,9 +103,9 @@ public class KontactHelper extends HelperBase {
         returnToHomePage();
     }
 
-    public void modify(int index, KontactData contact) {
-        selectKontact(index);
-        initKontactModification(index); //модификация последней группы
+    public void modify(KontactData contact) {
+        selectKontactById(contact.getId());
+        initKontactModification(); //модификация последней группы
         fillKontactForm(contact, false);
         submitKontactModification();
         returnToHomePage();
@@ -107,6 +113,13 @@ public class KontactHelper extends HelperBase {
 
     public void delete(int index) {
         selectKontact(index);
+        deleteKontact();
+        deleteTrue();
+        returnToHomePage();
+    }
+
+    public void delete(KontactData contact) {
+        selectKontactById(contact.getId());
         deleteKontact();
         deleteTrue();
         returnToHomePage();
@@ -122,6 +135,18 @@ public class KontactHelper extends HelperBase {
 
     public List<KontactData> list() {
         List<KontactData> contacts = new ArrayList<KontactData>();
+        List<WebElement> elements = wd.findElements(By.xpath("//tr[@name='entry']"));
+        for (WebElement element : elements) {
+            String firstname = element.findElement(By.xpath(".//td[3]")).getText();
+            String lastname = element.findElement(By.xpath(".//td[2]")).getText();
+            int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
+            contacts.add(new KontactData().withId(id).withFirstname(firstname).withLastname(lastname));
+        }
+        return contacts;
+    }
+
+    public Set<KontactData> all() {
+        Set<KontactData> contacts = new HashSet<>();
         List<WebElement> elements = wd.findElements(By.xpath("//tr[@name='entry']"));
         for (WebElement element : elements) {
             String firstname = element.findElement(By.xpath(".//td[3]")).getText();

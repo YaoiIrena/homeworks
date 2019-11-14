@@ -136,13 +136,13 @@ public class KontactData {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         KontactData that = (KontactData) o;
-        return Objects.equals(firstname, that.firstname) &&
+        return id == that.id &&
+                Objects.equals(firstname, that.firstname) &&
                 Objects.equals(lastname, that.lastname);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(firstname, lastname);
+        return Objects.hash(id, firstname, lastname);
     }
-
 }
