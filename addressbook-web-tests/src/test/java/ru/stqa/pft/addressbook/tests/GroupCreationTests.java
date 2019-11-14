@@ -13,7 +13,7 @@ public class GroupCreationTests extends TestBase {
   public void testGroupCreation() throws Exception {
     app.goTo().GroupPage(); //перейти на страницу групп
     List<GroupData> before = app.group().list();
-    GroupData group = new GroupData("test1", "test2", null);
+    GroupData group = new GroupData().withName("test1");
     //int before = app.getGroupHelper().getGroupCount();
     app.group().create(group);
     List<GroupData> after = app.group().list();
@@ -21,7 +21,7 @@ public class GroupCreationTests extends TestBase {
     Assert.assertEquals(after.size(), before.size() + 1);
 
     //список - поток, в потоке сравниваются объекты и выбирается max, после берется ID
-    group.setId(after.stream().max((o1, o2) -> Integer.compare(o1.getId(), o2.getId())).get().getId());
+    group.withId(after.stream().max((o1, o2) -> Integer.compare(o1.getId(), o2.getId())).get().getId());
     before.add(group);
     Comparator<? super GroupData> byId = (g1, g2) -> Integer.compare(g1.getId(), g2.getId());
     before.sort(byId);
