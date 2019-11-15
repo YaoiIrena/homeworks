@@ -15,8 +15,20 @@ public class KontactData {
     private String email2;
     private String email3;
     private String group;
+    private String allPhones;
+    private String allEmails;
 
-    public KontactData withId(int id) {
+    public KontactData withAllEmails(String allEmails) {
+        this.allEmails = allEmails;
+        return this;
+    }
+
+    public KontactData withAllPhones(String allPhones) {
+        this.allPhones = allPhones;
+        return this;
+    }
+
+        public KontactData withId(int id) {
         this.id = id;
         return this;
     }
@@ -120,6 +132,14 @@ public class KontactData {
 
     public String getGroup() {
         return group;
+    }
+
+    public String getAllPhones() {
+        return allPhones;
+    }
+
+    public String getAllEmails() {
+        return allEmails;
     }
 
     @Override
