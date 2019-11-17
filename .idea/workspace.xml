@@ -99,7 +99,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.ContactEmailTests.testContactEmail">
+  <component name="RunManager" selected="TestNG.ContactAddressesEmailsPhonesTests.testContactPhones">
     <configuration name="MyFirstProgram" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="C:/Program Files/Java/jdk1.8.0_221" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -156,7 +156,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContactAddressTests.testContactAddress" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ContactAddressesEmailsPhonesTests.testContactAddress" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
         <pattern>
@@ -165,8 +165,44 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.ContactAddressTests" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.ContactAddressesEmailsPhonesTests" />
       <option name="METHOD_NAME" value="testContactAddress" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContactAddressesEmailsPhonesTests.testContactEmail" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="addressbook-web-tests.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.pft.addressbook.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.tests" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.ContactAddressesEmailsPhonesTests" />
+      <option name="METHOD_NAME" value="testContactEmail" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContactAddressesEmailsPhonesTests.testContactPhones" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="addressbook-web-tests.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.pft.addressbook.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.tests" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.ContactAddressesEmailsPhonesTests" />
+      <option name="METHOD_NAME" value="testContactPhones" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -209,56 +245,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContactPhoneTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="addressbook-web-tests.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.stqa.pft.addressbook.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.ContactPhoneTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ContactPhoneTests.testContactPhones" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="addressbook-web-tests.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.stqa.pft.addressbook.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.ContactPhoneTests" />
-      <option name="METHOD_NAME" value="testContactPhones" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.MyFirstProgram" />
-      <item itemvalue="TestNG.ContactPhoneTests.testContactPhones" />
-      <item itemvalue="TestNG.ContactAddressTests.testContactAddress" />
+      <item itemvalue="TestNG.ContactAddressesEmailsPhonesTests.testContactAddress" />
       <item itemvalue="TestNG.ContactEmailTests.testContactEmail" />
-      <item itemvalue="TestNG.ContactPhoneTests" />
       <item itemvalue="TestNG.ContactEmailTests" />
+      <item itemvalue="TestNG.ContactAddressesEmailsPhonesTests.testContactEmail" />
+      <item itemvalue="TestNG.ContactAddressesEmailsPhonesTests.testContactPhones" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ContactAddressesEmailsPhonesTests.testContactPhones" />
+        <item itemvalue="TestNG.ContactAddressesEmailsPhonesTests.testContactEmail" />
+        <item itemvalue="TestNG.ContactAddressesEmailsPhonesTests.testContactAddress" />
         <item itemvalue="TestNG.ContactEmailTests.testContactEmail" />
         <item itemvalue="TestNG.ContactEmailTests" />
-        <item itemvalue="TestNG.ContactAddressTests.testContactAddress" />
-        <item itemvalue="TestNG.ContactPhoneTests" />
-        <item itemvalue="TestNG.ContactPhoneTests.testContactPhones" />
       </list>
     </recent_temporary>
   </component>
