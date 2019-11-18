@@ -34,6 +34,7 @@ public class KontactHelper extends HelperBase {
       type(By.name("email"), kontactData.getEmail());
       type(By.name("email2"), kontactData.getEmail2());
       type(By.name("email3"), kontactData.getEmail3());
+      attach(By.name("photo"), kontactData.getPhoto());
 
       if (creation)
       {
