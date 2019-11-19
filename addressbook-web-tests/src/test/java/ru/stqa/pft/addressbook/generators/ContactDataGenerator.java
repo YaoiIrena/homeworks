@@ -1,5 +1,8 @@
 package ru.stqa.pft.addressbook.generators;
 
+import com.beust.jcommander.JCommander;
+import com.beust.jcommander.Parameter;
+import com.beust.jcommander.ParameterException;
 import ru.stqa.pft.addressbook.model.KontactData;
 
 import java.io.File;
@@ -11,16 +14,31 @@ import java.util.List;
 
 public class ContactDataGenerator {
 
-    public static void main(String[] args) throws IOException {
-        int count = Integer.parseInt(args[0]);
-        File file = new File(args[1]);
+    @Parameter(names = "-c", description = "Contact count")
+    public int count;
 
-        List<KontactData> contacts = generateContacts(count);
-        save(contacts, file);
+    @Parameter(names = "-f", description = "Target file")
+    public String file;
+
+    public static void main(String[] args) throws IOException {
+        ContactDataGenerator generator = new ContactDataGenerator();
+        JCommander jCommander = new JCommander(generator);
+        try {
+            jCommander.parse(args);
+        } catch (ParameterException ex){
+            jCommander.usage();
+            return;
+        }
+        generator.run();
 
     }
 
-    private static void save(List<KontactData> contacts, File file) throws IOException {
+    private void run() throws IOException {
+        List<KontactData> contacts = generateContacts(count);
+        save(contacts, new File(file));
+    }
+
+    private void save(List<KontactData> contacts, File file) throws IOException {
         System.out.println(new File(".").getAbsolutePath());
         Writer writer = new FileWriter(file);
         for (KontactData contact: contacts){
@@ -31,7 +49,7 @@ public class ContactDataGenerator {
         writer.close();
         }
 
-    private static List<KontactData> generateContacts(int count) {
+    private List<KontactData> generateContacts(int count) {
         List<KontactData> contacts = new ArrayList<KontactData>();
         for (int i = 0; i < count; i++){
             contacts.add(new KontactData().withLastname(String.format("test %s", i)).withFirstname(String.format("test %s", i))
