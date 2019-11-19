@@ -18,12 +18,12 @@ public class KontactCreationTests extends TestBase {
   @DataProvider
   public Iterator<Object[]> validContacts(){
     List<Object[]> list = new ArrayList<Object[]>();
-    list.add(new Object[] {new KontactData().withFirstname("test1111").withLastname("test2").withAddress("test3")
+    list.add(new Object[] {new KontactData().withFirstname("test01").withLastname("test2").withAddress("test3")
             .withHome("+7123456").withMobile("+713467").withWork("+75678").withFax("+72456").withEmail("e@mail.ru")
-            .withEmail2("e2@mail.ru").withEmail3("e3@mail.ru").withGroup("test1").withPhoto(new File("resources/shark_attack.jpg"))});
-    list.add(new Object[] {new KontactData().withFirstname("test1111").withLastname("test2").withAddress("test3")
+            .withEmail2("e2@mail.ru").withEmail3("e3@mail.ru").withGroup("test4").withPhoto(new File("resources/shark_attack.jpg"))});
+    list.add(new Object[] {new KontactData().withFirstname("test01").withLastname("test2").withAddress("test3")
             .withHome("+7123456").withMobile("+713467").withWork("+75678").withFax("+72456").withEmail("e@mail.ru")
-            .withEmail2("e2@mail.ru").withEmail3("e3@mail.ru").withGroup("test1").withPhoto(new File("resources/shark_attack.jpg"))});
+            .withEmail2("e2@mail.ru").withEmail3("e3@mail.ru").withGroup("test4").withPhoto(new File("resources/shark_attack.jpg"))});
     return list.iterator();
   }
 
