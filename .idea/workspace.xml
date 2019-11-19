@@ -96,7 +96,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.KontactCreationTests.testKontactCreation">
+  <component name="RunManager" selected="TestNG.GroupCreationTests.testGroupCreation">
     <configuration name="ContactDataGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.generators.ContactDataGenerator" />
       <module name="addressbook-web-tests.test" />
@@ -183,6 +183,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GroupCreationTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="addressbook-web-tests.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.pft.addressbook.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.tests" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.GroupCreationTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GroupCreationTests.testGroupCreation" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
@@ -194,24 +211,6 @@
       <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.tests" />
       <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.GroupCreationTests" />
       <option name="METHOD_NAME" value="testGroupCreation" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="KontactCreationTests.testCurrentDir" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="addressbook-web-tests.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.stqa.pft.addressbook.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.KontactCreationTests" />
-      <option name="METHOD_NAME" value="testCurrentDir" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -241,17 +240,17 @@
       <item itemvalue="Application.MyFirstProgram" />
       <item itemvalue="Application.GroupDataGenerator" />
       <item itemvalue="Application.ContactDataGenerator" />
-      <item itemvalue="TestNG.KontactCreationTests.testCurrentDir" />
       <item itemvalue="TestNG.KontactCreationTests.testKontactCreation" />
       <item itemvalue="TestNG.GroupCreationTests.testGroupCreation" />
+      <item itemvalue="TestNG.GroupCreationTests" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.KontactCreationTests.testKontactCreation" />
         <item itemvalue="TestNG.GroupCreationTests.testGroupCreation" />
+        <item itemvalue="TestNG.GroupCreationTests" />
+        <item itemvalue="TestNG.KontactCreationTests.testKontactCreation" />
         <item itemvalue="Application.ContactDataGenerator" />
         <item itemvalue="Application.GroupDataGenerator" />
-        <item itemvalue="TestNG.KontactCreationTests.testCurrentDir" />
       </list>
     </recent_temporary>
   </component>

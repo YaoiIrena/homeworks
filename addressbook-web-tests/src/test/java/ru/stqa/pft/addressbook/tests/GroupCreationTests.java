@@ -32,7 +32,7 @@ public class GroupCreationTests extends TestBase {
     app.Logout(); //выход УЗ
   }
 
-  @Test
+  @Test(enabled = false)
   public void testBadGroupCreation() throws Exception {
     app.goTo().GroupPage(); //перейти на страницу групп
     Groups before = app.group().all();
