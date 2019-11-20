@@ -10,7 +10,7 @@
     <email>e0@gmail.com</email>
     <email2>e0@gmail.com</email2>
     <email3>e0@gmail.com</email3>
-    <group>test 0</group>
+    <group>test4</group>
   </ru.stqa.pft.addressbook.model.KontactData>
   <ru.stqa.pft.addressbook.model.KontactData>
     <id>2147483647</id>
@@ -23,6 +23,6 @@
     <email>e1@gmail.com</email>
     <email2>e1@gmail.com</email2>
     <email3>e1@gmail.com</email3>
-    <group>test 0</group>
+    <group>test4</group>
   </ru.stqa.pft.addressbook.model.KontactData>
 </list>

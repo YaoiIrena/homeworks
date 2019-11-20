@@ -1,0 +1,26 @@
+[
+  {
+    "firstname": "test 0",
+    "lastname": "test 0",
+    "address": "test 0",
+    "home": "+7 0",
+    "mobile": "+7 0",
+    "work": "+7 0",
+    "email": "e0@gmail.com",
+    "email2": "e0@gmail.com",
+    "email3": "e0@gmail.com",
+    "group": "test 0"
+  },
+  {
+    "firstname": "test 1",
+    "lastname": "test 1",
+    "address": "test 1",
+    "home": "+7 1",
+    "mobile": "+7 1",
+    "work": "+7 1",
+    "email": "e1@gmail.com",
+    "email2": "e1@gmail.com",
+    "email3": "e1@gmail.com",
+    "group": "test 0"
+  }
+]
