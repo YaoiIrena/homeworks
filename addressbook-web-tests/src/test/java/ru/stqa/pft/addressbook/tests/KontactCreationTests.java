@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.Contacts;
 import ru.stqa.pft.addressbook.model.KontactData;
 
-import java.io.File;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -16,14 +16,18 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class KontactCreationTests extends TestBase {
 
   @DataProvider
-  public Iterator<Object[]> validContacts(){
+  public Iterator<Object[]> validContacts() throws IOException {
     List<Object[]> list = new ArrayList<Object[]>();
-    list.add(new Object[] {new KontactData().withFirstname("test01").withLastname("test2").withAddress("test3")
-            .withHome("+7123456").withMobile("+713467").withWork("+75678").withFax("+72456").withEmail("e@mail.ru")
-            .withEmail2("e2@mail.ru").withEmail3("e3@mail.ru").withGroup("test4").withPhoto(new File("resources/shark_attack.jpg"))});
-    list.add(new Object[] {new KontactData().withFirstname("test01").withLastname("test2").withAddress("test3")
-            .withHome("+7123456").withMobile("+713467").withWork("+75678").withFax("+72456").withEmail("e@mail.ru")
-            .withEmail2("e2@mail.ru").withEmail3("e3@mail.ru").withGroup("test4").withPhoto(new File("resources/shark_attack.jpg"))});
+    BufferedReader reader = new BufferedReader(new FileReader(new File("resources/contacts.csv")));
+    String line = reader.readLine();
+    while (line != null){
+      String[] split = line.split(";");
+      list.add(new Object[]{new KontactData().withFirstname(split[0]).withLastname(split[1]).withAddress(split[2])
+              .withHome(split[3]).withMobile(split[4]).withWork(split[5]).withFax(split[6])
+              .withEmail(split[7]).withEmail2(split[8]).withEmail3(split[9])
+              .withGroup("test 0").withPhoto(new File("resources/shark_attack.jpg"))});
+      line = reader.readLine();
+    }
     return list.iterator();
   }
 
