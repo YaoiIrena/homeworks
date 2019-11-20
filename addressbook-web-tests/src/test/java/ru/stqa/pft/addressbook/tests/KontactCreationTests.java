@@ -23,8 +23,8 @@ public class KontactCreationTests extends TestBase {
     while (line != null){
       String[] split = line.split(";");
       list.add(new Object[]{new KontactData().withFirstname(split[0]).withLastname(split[1]).withAddress(split[2])
-              .withHome(split[3]).withMobile(split[4]).withWork(split[5]).withFax(split[6])
-              .withEmail(split[7]).withEmail2(split[8]).withEmail3(split[9])
+              .withHome(split[3]).withMobile(split[4]).withWork(split[5])
+              .withEmail(split[6]).withEmail2(split[7]).withEmail3(split[8])
               .withGroup("test 0").withPhoto(new File("resources/shark_attack.jpg"))});
       line = reader.readLine();
     }

@@ -43,8 +43,8 @@ public class ContactDataGenerator {
         Writer writer = new FileWriter(file);
         for (KontactData contact: contacts){
             writer.write(String.format("%s;%s;%s;%s;%s;%s;%s;%s;%s", contact.getLastname(), contact.getFirstname(),
-                    contact.getAddress(), contact.getEmail(), contact.getEmail2(),
-                    contact.getEmail3(), contact.getHome(), contact.getMobile(), contact.getFax()));
+                    contact.getAddress(), contact.getHome(), contact.getMobile(), contact.getWork(),
+                    contact.getEmail(), contact.getEmail2(), contact.getEmail3()));
         }
         writer.close();
         }
@@ -53,9 +53,9 @@ public class ContactDataGenerator {
         List<KontactData> contacts = new ArrayList<KontactData>();
         for (int i = 0; i < count; i++){
             contacts.add(new KontactData().withLastname(String.format("test %s", i)).withFirstname(String.format("test %s", i))
-                    .withAddress(String.format("test %s", i)).withEmail(String.format("e%s@gmail.com", i))
-                    .withEmail2(String.format("e%s@gmail.com", i)).withEmail3(String.format("e%s@gmail.com", i))
-                    .withHome(String.format("+7 %s", i)).withMobile(String.format("+7 %s", i)).withFax(String.format("+7 %s", i)));
+                    .withAddress(String.format("test %s", i)).withHome(String.format("+7 %s", i)).withMobile(String.format("+7 %s", i))
+                    .withWork(String.format("+7 %s", i)).withEmail(String.format("e%s@gmail.com", i))
+                    .withEmail2(String.format("e%s@gmail.com", i)).withEmail3(String.format("e%s@gmail.com", i)));
         }
         return contacts;
     }
