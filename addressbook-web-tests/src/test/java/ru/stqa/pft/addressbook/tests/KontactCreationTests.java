@@ -60,11 +60,11 @@ public class KontactCreationTests extends TestBase {
     app.Logout();
   }
 
-  @Test(enabled = false)
+  @Test(enabled = true)
   public void testCurrentDir(){
     File currentDir = new File(".");
     System.out.println(currentDir.getAbsolutePath());
-    File photo = new File("resources/shark_attack.jpg");
+    File photo = new File("src/tests/resources/shark_attack.jpg");
     System.out.println(photo.getAbsolutePath());
     System.out.println(photo.exists());
   }
