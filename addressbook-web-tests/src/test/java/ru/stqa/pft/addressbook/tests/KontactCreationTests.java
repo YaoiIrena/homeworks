@@ -60,7 +60,7 @@ public class KontactCreationTests extends TestBase {
     app.Logout();
   }
 
-  @Test(enabled = true)
+  @Test(enabled = false)
   public void testCurrentDir(){
     File currentDir = new File(".");
     System.out.println(currentDir.getAbsolutePath());

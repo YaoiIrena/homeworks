@@ -9,7 +9,7 @@
     "email": "e0@gmail.com",
     "email2": "e0@gmail.com",
     "email3": "e0@gmail.com",
-    "group": "test 0"
+    "group": "test 1"
   },
   {
     "firstname": "test 1",
@@ -21,18 +21,6 @@
     "email": "e1@gmail.com",
     "email2": "e1@gmail.com",
     "email3": "e1@gmail.com",
-    "group": "test 0"
-  },
-  {
-    "firstname": "test 2",
-    "lastname": "test 2",
-    "address": "test 2",
-    "home": "+7 2",
-    "mobile": "+7 2",
-    "work": "+7 2",
-    "email": "e2@gmail.com",
-    "email2": "e2@gmail.com",
-    "email3": "e2@gmail.com",
-    "group": "test 0"
+    "group": "test 1"
   }
 ]
