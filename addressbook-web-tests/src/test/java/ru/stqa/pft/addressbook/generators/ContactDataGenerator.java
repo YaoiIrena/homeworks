@@ -55,29 +55,30 @@ public class ContactDataGenerator {
     private void saveAsJson(List<KontactData> contacts, File file) throws IOException {
         Gson gson = new GsonBuilder().setPrettyPrinting().excludeFieldsWithoutExposeAnnotation().create();
         String json = gson.toJson(contacts);
-        Writer writer = new FileWriter(file);
-        writer.write(json);
-        writer.close();
+        try (Writer writer = new FileWriter(file)){
+            writer.write(json);
+        }
     }
 
     private void saveAsXml(List<KontactData> contacts, File file) throws IOException {
         XStream xstream = new XStream();
         String xml = xstream.toXML(contacts);
-        Writer writer = new FileWriter(file);
-        writer.write(xml);
-        writer.close();
+        try (Writer writer = new FileWriter(file)){
+            writer.write(xml);
+        }
     }
 
     private void saveAsCsv(List<KontactData> contacts, File file) throws IOException {
         System.out.println(new File(".").getAbsolutePath());
-        Writer writer = new FileWriter(file);
-        for (KontactData contact: contacts){
-            writer.write(String.format("%s;%s;%s;%s;%s;%s;%s;%s;%s", contact.getLastname(), contact.getFirstname(),
-                    contact.getAddress(), contact.getHome(), contact.getMobile(), contact.getWork(),
-                    contact.getEmail(), contact.getEmail2(), contact.getEmail3()));
+        try(Writer writer = new FileWriter(file)) {
+            for(KontactData contact:contacts)
+            {
+                writer.write(String.format("%s;%s;%s;%s;%s;%s;%s;%s;%s", contact.getLastname(), contact.getFirstname(),
+                        contact.getAddress(), contact.getHome(), contact.getMobile(), contact.getWork(),
+                        contact.getEmail(), contact.getEmail2(), contact.getEmail3()));
+            }
         }
-        writer.close();
-        }
+    }
 
     private List<KontactData> generateContacts(int count) {
         List<KontactData> contacts = new ArrayList<KontactData>();

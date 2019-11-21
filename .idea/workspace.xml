@@ -100,7 +100,7 @@
     <configuration name="ContactDataGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.generators.ContactDataGenerator" />
       <module name="addressbook-web-tests.test" />
-      <option name="PROGRAM_PARAMETERS" value="-c 2 -f resources/contacts.json -d json" />
+      <option name="PROGRAM_PARAMETERS" value="-c 3 -f resources/contacts.json -d json" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/addressbook-web-tests" />
       <extension name="coverage">
         <pattern>
@@ -115,7 +115,7 @@
     <configuration name="GroupDataGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.generators.GroupDataGenerator" />
       <module name="addressbook-web-tests.test" />
-      <option name="PROGRAM_PARAMETERS" value="-c 2 -f resources/groups.json -d json" />
+      <option name="PROGRAM_PARAMETERS" value="-c 3 -f resources/groups.json -d json" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/addressbook-web-tests" />
       <extension name="coverage">
         <pattern>
