@@ -99,7 +99,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ContactDataGenerator">
+  <component name="RunManager" selected="TestNG.KontactCreationTests">
     <configuration name="ContactDataGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.generators.ContactDataGenerator" />
       <module name="addressbook-web-tests.test" />
@@ -189,9 +189,18 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.tests" />
       <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.KontactCreationTests" />
+      <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea -Dbrowser=firefox" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
       <method v="2">
@@ -244,9 +253,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.KontactCreationTests" />
         <item itemvalue="Application.ContactDataGenerator" />
         <item itemvalue="TestNG.KontactModifikationTests.testKontactModification" />
-        <item itemvalue="TestNG.KontactCreationTests" />
         <item itemvalue="TestNG.C:/Users/admin/PDT-B9/homeworks/addressbook-web-tests/src/test/resources/testng.xml" />
         <item itemvalue="TestNG.KontactCreationTests.testCurrentDir" />
       </list>
