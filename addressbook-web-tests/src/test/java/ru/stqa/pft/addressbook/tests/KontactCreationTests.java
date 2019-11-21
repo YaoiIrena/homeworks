@@ -20,7 +20,7 @@ public class KontactCreationTests extends TestBase {
 
   @DataProvider
   public Iterator<Object[]> validContactsFromXml() throws IOException {
-    try (BufferedReader reader = new BufferedReader(new FileReader(new File("resources/contacts.xml")))) {
+    try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/contacts.xml")))) {
       String xml = "";
       String line = reader.readLine();
       while (line != null) {
@@ -36,7 +36,7 @@ public class KontactCreationTests extends TestBase {
 
   @DataProvider
   public Iterator<Object[]> validContactsFromJson() throws IOException {
-    try (BufferedReader reader = new BufferedReader(new FileReader(new File("resources/contacts.json")))) {
+    try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/contacts.json")))) {
       String json = "";
       String line = reader.readLine();
       while (line != null) {
@@ -64,7 +64,7 @@ public class KontactCreationTests extends TestBase {
   public void testCurrentDir(){
     File currentDir = new File(".");
     System.out.println(currentDir.getAbsolutePath());
-    File photo = new File("src/tests/resources/shark_attack.jpg");
+    File photo = new File("src/test/resources/shark_attack.jpg");
     System.out.println(photo.getAbsolutePath());
     System.out.println(photo.exists());
   }
