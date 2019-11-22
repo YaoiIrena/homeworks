@@ -36,5 +36,6 @@
     </logger>
     <root>
         <appender-ref ref="Console-Appender" />
+        <appender-ref ref="File-Appender" />
     </root>
 </configuration>
