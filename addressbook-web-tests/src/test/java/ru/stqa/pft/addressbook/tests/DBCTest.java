@@ -14,7 +14,7 @@ public class DBCTest {
         Connection conn = null;
         try {
             conn = DriverManager.getConnection("jdbc:mysql://localhost/addressbook?"
-                    + "user=admin&password=pass");
+                    + "user=root&password=");
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery("select group_name,group_header,group_footer from group_list");
             Groups groups = new Groups();
