@@ -23,7 +23,7 @@ public class KontactDeletionTests extends TestBase {
     {
       app.contact().create(new KontactData().withFirstname("test1").withLastname("test2").withAddress("test3")
               .withHome("+7123456").withMobile("+713467").withWork("+75678")
-              .withFax("+72456").withEmail("e@mail.ru").withEmail2("e2@mail.ru").withEmail3("e3@mail.ru").withGroup("test1"), true);
+              .withFax("+72456").withEmail("e@mail.ru").withEmail2("e2@mail.ru").withEmail3("e3@mail.ru")/*.withGroup("test1"), true*/);
     }
   }
 

@@ -6,6 +6,7 @@ import com.thoughtworks.xstream.XStream;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.Contacts;
+import ru.stqa.pft.addressbook.model.Groups;
 import ru.stqa.pft.addressbook.model.KontactData;
 
 import java.io.*;
@@ -52,6 +53,7 @@ public class KontactCreationTests extends TestBase {
 
   @Test(dataProvider = "validContactsFromJson")
   public void testKontactCreation(KontactData contact) throws Exception {
+    Groups groups = app.db().groups();
     Contacts before = app.db().contacts();
     app.contact().create(contact, true);
     Contacts after = app.db().contacts();

@@ -7,13 +7,16 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import ru.stqa.pft.addressbook.model.Contacts;
+import ru.stqa.pft.addressbook.model.GroupData;
 import ru.stqa.pft.addressbook.model.KontactData;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class KontactHelper extends HelperBase {
     private boolean acceptNextAlert;
+    private GroupData groups;
 
     public KontactHelper(WebDriver wd) {
         super(wd);
@@ -38,9 +41,11 @@ public class KontactHelper extends HelperBase {
 
       if (creation)
       {
-          new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(kontactData.getGroup());
-      } else
-      {
+          if (KontactData.getGroups().size() > 0){
+            Assert.assertTrue(KontactData.getGroups().size() == 1);
+            new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(KontactData.getGroups().iterator().next().getName());
+          }
+      } else {
           Assert.assertFalse(isElementPresent(By.name("new_group")));
       }
     }
@@ -102,10 +107,16 @@ public class KontactHelper extends HelperBase {
         click(By.xpath("(//input[@name='update'])[2]"));
     }
 
+    public KontactData inGroup(GroupData group){
+        groups.add(group);
+        return this;
+    }
+
     public void create(KontactData kontact, boolean creation)
     {
         goToNewKontact();
         fillKontactForm(kontact, creation);
+        inGroup(groups.iterator().nex());
         submitKontactCreation();
         returnToHomePage();
     }
