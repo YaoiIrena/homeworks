@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.GroupData;
 import ru.stqa.pft.addressbook.model.KontactData;
 
-public class AddContactInGroupTests extends TestBase {
+public class AddDeleteContactTests extends TestBase {
 
     @BeforeMethod
     public void ensurePreconditions() {

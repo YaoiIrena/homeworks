@@ -153,7 +153,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AddContactInGroupTests.testAddDeleteContact" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AddDeleteContactTests.testAddDeleteContact" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
         <pattern>
@@ -162,7 +162,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.AddContactInGroupTests" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.AddDeleteContactTests" />
       <option name="METHOD_NAME" value="testAddDeleteContact" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -188,7 +188,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KontactCreationTests.testKontactCreation (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="KontactCreationTests.testKontactCreation" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
         <pattern>
@@ -247,7 +247,7 @@
       <item itemvalue="TestNG.KontactCreationTests.testKontactCreation (1)" />
       <item itemvalue="TestNG.KontactDeletionTests.testKontactDeletion" />
       <item itemvalue="TestNG.KontactCreationTests" />
-      <item itemvalue="TestNG.AddContactInGroupTests.testAddDeleteContact" />
+      <item itemvalue="TestNG.AddDeleteContactTests.testAddDeleteContact" />
       <item itemvalue="TestNG.KontactModifikationTests.testKontactModification" />
     </list>
     <recent_temporary>
@@ -255,7 +255,7 @@
         <item itemvalue="TestNG.KontactModifikationTests.testKontactModification" />
         <item itemvalue="TestNG.KontactDeletionTests.testKontactDeletion" />
         <item itemvalue="TestNG.KontactCreationTests.testKontactCreation (1)" />
-        <item itemvalue="TestNG.AddContactInGroupTests.testAddDeleteContact" />
+        <item itemvalue="TestNG.AddDeleteContactTests.testAddDeleteContact" />
         <item itemvalue="TestNG.KontactCreationTests" />
       </list>
     </recent_temporary>
