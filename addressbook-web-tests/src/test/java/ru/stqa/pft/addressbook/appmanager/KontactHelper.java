@@ -10,13 +10,11 @@ import ru.stqa.pft.addressbook.model.Contacts;
 import ru.stqa.pft.addressbook.model.GroupData;
 import ru.stqa.pft.addressbook.model.KontactData;
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class KontactHelper extends HelperBase {
     private boolean acceptNextAlert;
-    private GroupData groups;
 
     public KontactHelper(WebDriver wd) {
         super(wd);
@@ -41,9 +39,9 @@ public class KontactHelper extends HelperBase {
 
       if (creation)
       {
-          if (KontactData.getGroups().size() > 0){
-            Assert.assertTrue(KontactData.getGroups().size() == 1);
-            new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(KontactData.getGroups().iterator().next().getName());
+          if (kontactData.getGroups().size() > 0){
+            Assert.assertTrue(kontactData.getGroups().size() == 1);
+            new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(kontactData.getGroups().iterator().next().getName());
           }
       } else {
           Assert.assertFalse(isElementPresent(By.name("new_group")));
@@ -107,16 +105,10 @@ public class KontactHelper extends HelperBase {
         click(By.xpath("(//input[@name='update'])[2]"));
     }
 
-    public KontactData inGroup(GroupData group){
-        groups.add(group);
-        return this;
-    }
-
     public void create(KontactData kontact, boolean creation)
     {
         goToNewKontact();
         fillKontactForm(kontact, creation);
-        inGroup(groups.iterator().nex());
         submitKontactCreation();
         returnToHomePage();
     }
@@ -195,5 +187,45 @@ public class KontactHelper extends HelperBase {
         return new KontactData().withId(contact.getId()).withFirstname(firstname).withLastname(lastname).withAddress(address)
                 .withEmail(email).withEmail2(email2).withEmail3(email3)
                 .withHome(home).withMobile(mobile).withWork(work);
+    }
+
+    public GroupData selectGroup(GroupData group) {
+        wd.findElement(By.name("to_group")).click();
+        List<GroupData> groups = new ArrayList<GroupData>();
+        List<WebElement> elements = wd.findElements(By.cssSelector("to_group"));
+        for (WebElement element: elements){
+            String name = element.getText();
+            int id = Integer.parseInt(wd.findElement(By.name("to_group")).getAttribute("value"));
+            groups.add(new GroupData().withId(id).withName(name));
+        }
+        wd.findElement(By.cssSelector("select[name=\"to_group\"] > option[value='" + groups.get(new GroupData().getId()) + "']")).click();
+        return new GroupData().withName(group.getName());
+    }
+
+    public void addInGroup() {
+        wd.findElement(By.name("add")).click();
+    }
+
+    public GroupData selectFromGroup(GroupData group) {
+        wd.findElement(By.name("group")).click();
+        List<GroupData> groups = new ArrayList<GroupData>();
+        List<WebElement> elements = wd.findElements(By.cssSelector("group"));
+        for (WebElement element: elements){
+            String name = element.getText();
+            int id = Integer.parseInt(wd.findElement(By.name("group")).getAttribute("value"));
+            groups.add(new GroupData().withId(id).withName(name));
+        }
+        wd.findElement(By.cssSelector("option[value='" + groups.get(new GroupData().getId()) + "']")).click();
+        return new GroupData().withName(group.getName());
+    }
+
+
+    public void deleteFromGroup() {
+        wd.findElement(By.name("remove")).click();
+    }
+
+    public void selectContactFromGroup(KontactData contact, GroupData group) {
+        selectFromGroup(group);
+        selectKontactById(contact.getId());
     }
 }

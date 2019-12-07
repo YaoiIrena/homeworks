@@ -96,7 +96,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.HbConnTest.testHbConn">
+  <component name="RunManager" selected="TestNG.KontactModifikationTests.testKontactModification">
     <configuration name="MyFirstProgram" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="C:/Program Files/Java/jdk1.8.0_221" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -153,7 +153,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GroupCreationTests.testGroupCreation (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AddContactInGroupTests.testAddDeleteContact" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
         <pattern>
@@ -162,8 +162,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.GroupCreationTests" />
-      <option name="METHOD_NAME" value="testGroupCreation" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.AddContactInGroupTests" />
+      <option name="METHOD_NAME" value="testAddDeleteContact" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -171,7 +171,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GroupDeletionTests.testGroupDeletion" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="KontactCreationTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
         <pattern>
@@ -180,27 +180,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.GroupDeletionTests" />
-      <option name="METHOD_NAME" value="testGroupDeletion" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HbConnTest.testHbConn" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="addressbook-web-tests.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.stqa.pft.addressbook.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.HbConnTest" />
-      <option name="METHOD_NAME" value="testHbConn" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.KontactCreationTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -243,21 +224,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="KontactModifikationTests.testKontactModification" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="addressbook-web-tests.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.pft.addressbook.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.tests" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.KontactModifikationTests" />
+      <option name="METHOD_NAME" value="testKontactModification" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.MyFirstProgram" />
-      <item itemvalue="TestNG.GroupCreationTests.testGroupCreation (1)" />
-      <item itemvalue="TestNG.GroupDeletionTests.testGroupDeletion" />
       <item itemvalue="TestNG.KontactCreationTests.testKontactCreation (1)" />
       <item itemvalue="TestNG.KontactDeletionTests.testKontactDeletion" />
-      <item itemvalue="TestNG.HbConnTest.testHbConn" />
+      <item itemvalue="TestNG.KontactCreationTests" />
+      <item itemvalue="TestNG.AddContactInGroupTests.testAddDeleteContact" />
+      <item itemvalue="TestNG.KontactModifikationTests.testKontactModification" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.HbConnTest.testHbConn" />
+        <item itemvalue="TestNG.KontactModifikationTests.testKontactModification" />
         <item itemvalue="TestNG.KontactDeletionTests.testKontactDeletion" />
         <item itemvalue="TestNG.KontactCreationTests.testKontactCreation (1)" />
-        <item itemvalue="TestNG.GroupDeletionTests.testGroupDeletion" />
-        <item itemvalue="TestNG.GroupCreationTests.testGroupCreation (1)" />
+        <item itemvalue="TestNG.AddContactInGroupTests.testAddDeleteContact" />
+        <item itemvalue="TestNG.KontactCreationTests" />
       </list>
     </recent_temporary>
   </component>
