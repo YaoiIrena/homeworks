@@ -189,24 +189,24 @@ public class KontactHelper extends HelperBase {
                 .withHome(home).withMobile(mobile).withWork(work);
     }
 
-    public GroupData selectGroup(GroupData group) {
+    public void selectGroup(GroupData group) {
         wd.findElement(By.name("to_group")).click();
-        List<GroupData> groups = new ArrayList<GroupData>();
+        List<GroupData> groups = new ArrayList<>();
         List<WebElement> elements = wd.findElements(By.cssSelector("to_group"));
         for (WebElement element: elements){
             String name = element.getText();
             int id = Integer.parseInt(wd.findElement(By.name("to_group")).getAttribute("value"));
             groups.add(new GroupData().withId(id).withName(name));
         }
-        wd.findElement(By.cssSelector("select[name=\"to_group\"] > option[value='" + groups.get(new GroupData().getId()) + "']")).click();
-        return new GroupData().withName(group.getName());
+        new Select(wd.findElement(By.name("to_group"))).selectByVisibleText(groups.iterator().next().getName());
+        wd.findElement(By.cssSelector("select[name=\"to_group\"] > option[value='" + group.getId() + "']")).click();
     }
 
     public void addInGroup() {
         wd.findElement(By.name("add")).click();
     }
 
-    public GroupData selectFromGroup(GroupData group) {
+    public void selectFromGroup(GroupData group) {
         wd.findElement(By.name("group")).click();
         List<GroupData> groups = new ArrayList<GroupData>();
         List<WebElement> elements = wd.findElements(By.cssSelector("group"));
@@ -215,10 +215,9 @@ public class KontactHelper extends HelperBase {
             int id = Integer.parseInt(wd.findElement(By.name("group")).getAttribute("value"));
             groups.add(new GroupData().withId(id).withName(name));
         }
-        wd.findElement(By.cssSelector("option[value='" + groups.get(new GroupData().getId()) + "']")).click();
-        return new GroupData().withName(group.getName());
+        new Select(wd.findElement(By.name("group"))).selectByVisibleText(groups.iterator().next().getName());
+        wd.findElement(By.cssSelector("option[value='" + group.getId() + "']")).click();
     }
-
 
     public void deleteFromGroup() {
         wd.findElement(By.name("remove")).click();
