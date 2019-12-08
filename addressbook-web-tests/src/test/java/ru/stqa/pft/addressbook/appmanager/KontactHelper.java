@@ -191,14 +191,7 @@ public class KontactHelper extends HelperBase {
 
     public void selectGroup(GroupData group) {
         wd.findElement(By.name("to_group")).click();
-        List<GroupData> groups = new ArrayList<>();
-        List<WebElement> elements = wd.findElements(By.cssSelector("to_group"));
-        for (WebElement element: elements){
-            String name = element.getText();
-            int id = Integer.parseInt(wd.findElement(By.name("to_group")).getAttribute("value"));
-            groups.add(new GroupData().withId(id).withName(name));
-        }
-        new Select(wd.findElement(By.name("to_group"))).selectByVisibleText(groups.iterator().next().getName());
+        new Select(wd.findElement(By.name("to_group"))).selectByVisibleText(group.getName());
         wd.findElement(By.cssSelector("select[name=\"to_group\"] > option[value='" + group.getId() + "']")).click();
     }
 
@@ -208,14 +201,7 @@ public class KontactHelper extends HelperBase {
 
     public void selectFromGroup(GroupData group) {
         wd.findElement(By.name("group")).click();
-        List<GroupData> groups = new ArrayList<GroupData>();
-        List<WebElement> elements = wd.findElements(By.cssSelector("group"));
-        for (WebElement element: elements){
-            String name = element.getText();
-            int id = Integer.parseInt(wd.findElement(By.name("group")).getAttribute("value"));
-            groups.add(new GroupData().withId(id).withName(name));
-        }
-        new Select(wd.findElement(By.name("group"))).selectByVisibleText(groups.iterator().next().getName());
+        new Select(wd.findElement(By.name("group"))).selectByVisibleText(group.getName());
         wd.findElement(By.cssSelector("option[value='" + group.getId() + "']")).click();
     }
 
