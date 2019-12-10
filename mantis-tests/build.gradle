@@ -11,11 +11,13 @@ dependencies
             implementation 'org.testng:testng:7.0.0'
             implementation 'org.seleniumhq.selenium:selenium-java:4.0.0-alpha-3'
             implementation 'org.hamcrest:java-hamcrest:2.0.0.0'
+            compile group: 'org.apache.httpcomponents', name: 'httpcore', version: '4.0-alpha5'
+            compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.10'
         }
 
 test {
     useTestNG() {
-        suites 'src/test/resources/testng.xml'
+        suites 'src/test/resources/testing.xml'
     }
 
     if (project.hasProperty('browser')) {

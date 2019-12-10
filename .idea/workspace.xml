@@ -31,6 +31,9 @@
         <task path="$PROJECT_DIR$/addressbook-web-tests">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/mantis-tests">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -69,29 +72,29 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="extract.method.default.visibility" value="public" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/sandbox/src/main/java" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Videos/ПДТ-Б9/httpcore-4.0-alpha5.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/mantis-tests/src/test/resources" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15479875" />
     <property name="project.structure.side.proportion" value="0.3937729" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="ru.stqa.pft.addressbook.appmanager" />
-      <recent name="ru.stqa.pft.addressbook" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kravchenko\PDT-B9\homeworks\sandbox\src\main\java" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="ru.stqa.pft.sandbox" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\kravchenko\PDT-B9\homeworks\sandbox\src\main\java" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\PDT-B9\homeworks\mantis-tests\src\test\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ru.stqa.pft.mantis.appmanager" />
       <recent name="ru.stqa.pft.mantis.tests" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\admin\PDT-B9\homeworks\mantis-tests\src\test\resources" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ru.stqa.pft.addressbook.appmanager" />
+      <recent name="ru.stqa.pft.addressbook" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -256,11 +259,11 @@
     </configuration>
     <list>
       <item itemvalue="Application.MyFirstProgram" />
+      <item itemvalue="Gradle.LoginTests.testLogin" />
       <item itemvalue="TestNG.KontactDeletionTests.testKontactDeletion" />
       <item itemvalue="TestNG.KontactCreationTests" />
       <item itemvalue="TestNG.AddDeleteContactTests.testAddDeleteContact" />
       <item itemvalue="TestNG.KontactModifikationTests.testKontactModification" />
-      <item itemvalue="Gradle.LoginTests.testLogin" />
     </list>
     <recent_temporary>
       <list>
