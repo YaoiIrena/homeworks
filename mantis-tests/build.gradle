@@ -13,6 +13,7 @@ dependencies
             implementation 'org.hamcrest:java-hamcrest:2.0.0.0'
             compile group: 'org.apache.httpcomponents', name: 'httpcore', version: '4.0-alpha5'
             compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.10'
+            implementation 'commons-net:commons-net:3.6'
         }
 
 test {
