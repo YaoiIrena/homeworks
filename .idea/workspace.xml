@@ -79,8 +79,10 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\kravchenko\PDT-B9\homeworks\sandbox\src\main\java" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ru.stqa.pft.mantis.appmanager" />
+      <recent name="ru.stqa.pft.addressbook.appmanager" />
+      <recent name="ru.stqa.pft.addressbook" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="ru.stqa.pft.sandbox" />
@@ -92,10 +94,8 @@
       <recent name="ru.stqa.pft.mantis.appmanager" />
       <recent name="ru.stqa.pft.mantis.tests" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="ru.stqa.pft.mantis.appmanager" />
-      <recent name="ru.stqa.pft.addressbook.appmanager" />
-      <recent name="ru.stqa.pft.addressbook" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kravchenko\PDT-B9\homeworks\sandbox\src\main\java" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -110,7 +110,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.LoginTests.testLogin">
+  <component name="RunManager" selected="Gradle.RegistrationTests.testRegistration">
     <configuration name="MyFirstProgram" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="C:/Program Files/Java/jdk1.8.0_221" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -264,15 +264,15 @@
     <list>
       <item itemvalue="Application.MyFirstProgram" />
       <item itemvalue="Gradle.LoginTests.testLogin" />
+      <item itemvalue="Gradle.RegistrationTests.testRegistration" />
       <item itemvalue="TestNG.KontactDeletionTests.testKontactDeletion" />
       <item itemvalue="TestNG.AddDeleteContactTests.testAddDeleteContact" />
       <item itemvalue="TestNG.KontactModifikationTests.testKontactModification" />
-      <item itemvalue="Gradle.RegistrationTests.testRegistration" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.LoginTests.testLogin" />
         <item itemvalue="Gradle.RegistrationTests.testRegistration" />
+        <item itemvalue="Gradle.LoginTests.testLogin" />
         <item itemvalue="TestNG.AddDeleteContactTests.testAddDeleteContact" />
         <item itemvalue="TestNG.KontactModifikationTests.testKontactModification" />
         <item itemvalue="TestNG.KontactDeletionTests.testKontactDeletion" />
@@ -311,15 +311,6 @@
     </ignored-roots>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/pft/mantis/tests/RegistrationTests.java</url>
-          <line>8</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Remote">
         <watch expression="session.app" />
