@@ -25,7 +25,7 @@ public class AddDeleteContactTests extends TestBase {
 
     @Test
     public void testAddDeleteContact() {
-        if (app.db().selectGroupForDeleteContact() == null) {
+        if (app.group().selectGroupForDeleteContact() == null) {
             app.contact().create(new KontactData().withFirstname("test1").withLastname("test2").withAddress("test3")
                     .withHome("+7123456").withMobile("+713467").withWork("+75678").withFax("+72456")
                     .withEmail("e@mail.ru").withEmail2("e2@mail.ru").withEmail3("e3@mail.ru"), true);
@@ -45,7 +45,7 @@ public class AddDeleteContactTests extends TestBase {
         }
 
         Groups groups = app.db().groups();
-        GroupData foundGroup = app.db().selectedGroup(groups, contact);
+        GroupData foundGroup = app.group().selectedGroup(groups, contact);
         if (foundGroup != null) {
             app.contact().returnToHomePage();
             app.contact().create(new KontactData().withFirstname("test1").withLastname("test2").withAddress("test3")

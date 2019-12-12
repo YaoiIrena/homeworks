@@ -50,29 +50,10 @@ public class DbHelper {
         return new Groups(result);
     }
 
-    public GroupData selectGroupForDeleteContact() {
-        Groups groups = groups();
-        for (GroupData group : groups) {
-            if (group.getContacts().size() > 0) {
-                return group;
-            }
-        } return null;
-    }
-
-    public GroupData selectedGroup(Groups groups, KontactData contact) {
-        Groups selectedGroups = contact.getGroups();
-        for (GroupData group : groups) {
-            if (! selectedGroups.contains(group)) {
-                return group;
-            }
-        }
-        return null;
-    }
-
     public KontactData selectContactWithMaxId() {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
-        KontactData result = (KontactData) session.createQuery("from KontactData where deprecated = '0000-00-00' and" +
+        KontactData result = (KontactData) session.createQuery("from KontactData where deprecated = '0000-00-00' and " +
                 "id = (select max(KontactData.id) from KontactData)").getSingleResult();
         session.getTransaction().commit();
         session.close();
