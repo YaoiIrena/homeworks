@@ -54,7 +54,7 @@ public class DbHelper {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
         KontactData result = (KontactData) session.createQuery("from KontactData where deprecated = '0000-00-00' and " +
-                "id = (select max(KontactData.id) from KontactData)").getSingleResult();
+                "id = (select max(id) from KontactData)").getSingleResult();
         session.getTransaction().commit();
         session.close();
         return result;
