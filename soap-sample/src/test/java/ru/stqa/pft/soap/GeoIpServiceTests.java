@@ -1,7 +1,6 @@
 package ru.stqa.pft.soap;
 
-import net.webservicex.GeoIP;
-import net.webservicex.GeoIPService;
+import com.lavasoft.GeoIPService;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -9,7 +8,7 @@ public class GeoIpServiceTests {
 
     @Test
     public void testMyIp(){
-        GeoIP geoIP = new GeoIPService().getGeoIPServiceSoap12().getGeoIP("172.68.11.81");
-        Assert.assertEquals(geoIP.getCountryCode(), "RUS");
+        String ipLocation = new GeoIPService().getGeoIPServiceSoap12().getIpLocation("172.68.11.81");
+        Assert.assertEquals(ipLocation, "<GeoIP><Country>RU</Country><State>48</State></GeoIP>");
     }
 }
