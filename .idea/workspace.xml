@@ -37,6 +37,9 @@
         <task path="$PROJECT_DIR$/mantis-tests">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/soap-sample">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand />
@@ -108,7 +111,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.GeoIpServiceTests.testMyIp">
+  <component name="RunManager" selected="Gradle.SoapTests.testCreateIssue">
     <configuration name="MyFirstProgram" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="C:/Program Files/Java/jdk1.8.0_221" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -118,12 +121,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GeoIpServiceTests.testIp" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GeoIpServiceTests.testMyIp" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/soap-sample" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;ru.stqa.pft.soap.GeoIpServiceTests.testIp&quot;" />
+        <option name="scriptParameters" value="--tests &quot;ru.stqa.pft.soap.GeoIpServiceTests.testMyIp&quot; --scan --info" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -138,12 +141,32 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GeoIpServiceTests.testMyIp" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SoapTests.testCreateIssue" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/soap-sample" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/mantis-tests" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;ru.stqa.pft.soap.GeoIpServiceTests.testMyIp&quot; --scan --info" />
+        <option name="scriptParameters" value="--tests &quot;ru.stqa.pft.mantis.tests.SoapTests.testCreateIssue&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="SoapTests.testGetProjects" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/mantis-tests" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;ru.stqa.pft.mantis.tests.SoapTests.testGetProjects&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -240,39 +263,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GroupDeletionTests.testGroupDeletion" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="addressbook-web-tests.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.stqa.pft.addressbook.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.GroupDeletionTests" />
-      <option name="METHOD_NAME" value="testGroupDeletion" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.MyFirstProgram" />
-      <item itemvalue="Gradle.GeoIpServiceTests.testIp" />
       <item itemvalue="Gradle.GeoIpServiceTests.testMyIp" />
-      <item itemvalue="TestNG.GroupDeletionTests.testGroupDeletion" />
       <item itemvalue="TestNG.GeoIpServiceTests" />
       <item itemvalue="TestNG.GeoIpServiceTests.testMyIp" />
+      <item itemvalue="Gradle.SoapTests.testGetProjects" />
+      <item itemvalue="Gradle.SoapTests.testCreateIssue" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.SoapTests.testCreateIssue" />
+        <item itemvalue="Gradle.SoapTests.testGetProjects" />
         <item itemvalue="Gradle.GeoIpServiceTests.testMyIp" />
         <item itemvalue="TestNG.GeoIpServiceTests.testMyIp" />
         <item itemvalue="TestNG.GeoIpServiceTests" />
-        <item itemvalue="TestNG.GroupDeletionTests.testGroupDeletion" />
-        <item itemvalue="Gradle.GeoIpServiceTests.testIp" />
       </list>
     </recent_temporary>
   </component>
