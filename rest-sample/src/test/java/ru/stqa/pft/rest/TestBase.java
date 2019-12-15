@@ -15,7 +15,7 @@ public class TestBase {
     private String issueStatus;
 
     private Executor getExecutor() {
-        return Executor.newInstance().auth("deb9007ed0fa03a797fcb8ff57b0d606", "");
+        return Executor.newInstance().auth("288f44776e7bec4bf44fdfeb1e646490", "");
     }
 
     public void skipIfNotFixed(int issueId) throws IOException {
@@ -33,7 +33,7 @@ public class TestBase {
     }
 
     public String getIssue(int issueId) throws IOException {
-        String json = getExecutor().execute(Request.Get("http://demo.bugify.com/api/issues/" + issueId + ".json")).returnContent().asString();
+        String json = getExecutor().execute(Request.Get("https://bugify.stqa.ru/api/issues/" + issueId + ".json")).returnContent().asString();
         JsonElement parsed = new JsonParser().parse(json);
         JsonElement issues = parsed.getAsJsonObject().get("issues");
         Set<Issue> issue = new Gson().fromJson(issues, new TypeToken<Set<Issue>>(){}.getType());
