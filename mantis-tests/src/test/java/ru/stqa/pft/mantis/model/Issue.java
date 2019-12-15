@@ -3,9 +3,29 @@ package ru.stqa.pft.mantis.model;
 public class Issue {
 
     private int id;
+    private int status_id;
+    private String status;
     private String summary;
     private String description;
     private Project project;
+
+    public int getStatus_id() {
+        return status_id;
+    }
+
+    public Issue withStatus_id(int status_id) {
+        this.status_id = status_id;
+        return this;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public Issue withStatus(String status) {
+        this.status = status;
+        return this;
+    }
 
     public int getId() {
         return id;
