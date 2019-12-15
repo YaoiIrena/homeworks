@@ -51,7 +51,7 @@ public class SoapHelper {
     public Set<Issue> getIssues() throws MalformedURLException, ServiceException {
         MantisConnectPortType mc = getMantisConnect();
         IssueData issue = new IssueData();
-        IssueData[] issues = mc.mc_project_get_issues(app.getProperty("web.adminLogin"), app.getProperty("web.adminPassword"), BigInteger.valueOf(issue.getProject().getId()), 1, 1);
+        IssueData[] issues = mc.mc_issue_get(app.getProperty("web.adminLogin"), app.getProperty("web.adminPassword"), BigInteger.valueOf(issue.getId()));
         return Arrays.asList(issues).stream().map((p) -> new Issue().withId(p.getId().intValue()).withSummary(p.getSummary()).withStatus_id(p.getStatus_id().intValue())).collect(Collectors.toSet());
     }
 }

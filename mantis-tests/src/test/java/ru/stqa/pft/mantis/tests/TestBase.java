@@ -48,8 +48,6 @@ public class TestBase {
 
     @BeforeTest
     public boolean isIssueOpen(int issueId) throws RemoteException, ServiceException, MalformedURLException {
-    //авторизация и получение проекта
-        Set<Project> projects = app.soap().getProjects();
     //получение задач по фильтру status and summary
         Set<Issue> issues = app.soap().getIssues();
         //проверка статуса
