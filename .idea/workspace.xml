@@ -266,10 +266,10 @@
     <list>
       <item itemvalue="Application.MyFirstProgram" />
       <item itemvalue="Gradle.GeoIpServiceTests.testMyIp" />
-      <item itemvalue="TestNG.GeoIpServiceTests" />
-      <item itemvalue="TestNG.GeoIpServiceTests.testMyIp" />
       <item itemvalue="Gradle.SoapTests.testGetProjects" />
       <item itemvalue="Gradle.SoapTests.testCreateIssue" />
+      <item itemvalue="TestNG.GeoIpServiceTests" />
+      <item itemvalue="TestNG.GeoIpServiceTests.testMyIp" />
     </list>
     <recent_temporary>
       <list>
