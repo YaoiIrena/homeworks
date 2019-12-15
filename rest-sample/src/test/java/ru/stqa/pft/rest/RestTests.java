@@ -13,10 +13,11 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 import java.util.Set;
 
-public class RestTests {
+public class RestTests extends TestBase {
 
     @Test
     public void testCreateIssue() throws IOException {
+        skipIfNotFixed(5230);
         Set<Issue> oldIssues = getIssues();
         Issue newIssue = new Issue().withSubject("Test Issue").withDescription("New Test Issue");
         int issueId = createIssue(newIssue);

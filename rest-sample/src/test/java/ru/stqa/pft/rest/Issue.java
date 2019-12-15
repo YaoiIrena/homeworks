@@ -5,6 +5,7 @@ import java.util.Objects;
 public class Issue {
 
     private int id;
+    private String status;
     private String subject;
     private String describtion;
 
@@ -19,6 +20,15 @@ public class Issue {
 
     public String getSubject() {
         return subject;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public Issue withStatus(String status) {
+        this.status = status;
+        return this;
     }
 
     public Issue withSubject(String subject) {
@@ -41,12 +51,13 @@ public class Issue {
         if (o == null || getClass() != o.getClass()) return false;
         Issue issue = (Issue) o;
         return id == issue.id &&
+                Objects.equals(status, issue.status) &&
                 Objects.equals(subject, issue.subject) &&
                 Objects.equals(describtion, issue.describtion);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, subject, describtion);
+        return Objects.hash(id, status, subject, describtion);
     }
 }
