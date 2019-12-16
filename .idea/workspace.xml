@@ -15,6 +15,9 @@
     <projectState path="$PROJECT_DIR$/addressbook-web-tests">
       <ProjectState />
     </projectState>
+    <projectState path="$PROJECT_DIR$/github-sample">
+      <ProjectState />
+    </projectState>
     <projectState path="$PROJECT_DIR$/mantis-tests">
       <ProjectState />
     </projectState>
@@ -76,7 +79,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="extract.method.default.visibility" value="public" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/sandbox/src/main/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/rest-sample/build.gradle" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/github-sample/build.gradle" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15479875" />
     <property name="project.structure.side.proportion" value="0.3937729" />
@@ -84,6 +87,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\PDT-B9\homeworks\github-sample\src\main" />
       <recent name="C:\Users\kravchenko\PDT-B9\homeworks\sandbox\src\main\java" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
