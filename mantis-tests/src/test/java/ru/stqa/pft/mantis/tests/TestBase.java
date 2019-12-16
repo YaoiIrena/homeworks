@@ -35,6 +35,6 @@ public class TestBase {
     }
 
     private boolean isIssueOpen(int issueId) throws RemoteException, ServiceException, MalformedURLException {
-        return app.soap().getIssue(issueId).getStatus_id() != 80;
+        return !app.soap().getIssue(issueId).getStatus().equals("resolved");
     }
 }
