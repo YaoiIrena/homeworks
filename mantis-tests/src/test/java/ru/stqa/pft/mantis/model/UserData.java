@@ -20,13 +20,17 @@ public class UserData {
     @Column(name = "email")
     private String email;
 
+    @Column(name = "access_level")
+    private short accessLevel;
+
     public UserData() {
     }
 
-    public UserData(int id, String username, String email) {
+    public UserData(int id, String username, String email, short accessLevel) {
         this.id = id;
         this.username = username;
         this.email = email;
+        this.accessLevel = accessLevel;
     }
 
     public int getId() {
@@ -53,18 +57,27 @@ public class UserData {
         this.email = email;
     }
 
+    public short getAccessLevel() {
+        return accessLevel;
+    }
+
+    public void setAccessLevel(short accessLevel) {
+        this.accessLevel = accessLevel;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         UserData userData = (UserData) o;
         return id == userData.id &&
+                accessLevel == userData.accessLevel &&
                 Objects.equals(username, userData.username) &&
                 Objects.equals(email, userData.email);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, username, email);
+        return Objects.hash(id, username, email, accessLevel);
     }
 }

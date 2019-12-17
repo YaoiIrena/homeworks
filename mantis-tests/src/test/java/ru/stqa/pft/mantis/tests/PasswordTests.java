@@ -21,7 +21,8 @@ public class PasswordTests extends TestBase {
 
     @Test
     public void testChangePassword() throws InterruptedException, IOException {
-        UserData userData = app.db().users().iterator().next();
+        // получаем данные о первом попавшемся пользователе, который не является администратором (уровень доступа 90)
+        UserData userData = app.db().users().stream().filter(user -> user.getAccessLevel() != 90).findFirst().get();
 
         String newPassword = "password1";
 
