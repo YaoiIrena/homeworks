@@ -9,7 +9,7 @@ repositories
 dependencies
         {
             implementation 'org.testng:testng:7.0.0'
-            implementation 'org.seleniumhq.selenium:selenium-java:4.0.0-alpha-3'
+            implementation 'org.seleniumhq.selenium:selenium-java:3.141.59'
             implementation 'org.hamcrest:java-hamcrest:2.0.0.0'
             implementation 'com.beust:jcommander:1.78'
             implementation 'com.thoughtworks.xstream:xstream:1.4.11.1'
@@ -22,6 +22,9 @@ dependencies
 task testGroups(type: Test) {
     useTestNG() {
         suites 'src/test/resources/testng-groups.xml'
+    }
+    if (project.hasProperty('platform')) {
+        systemProperty 'platform', "${platform}"
     }
 
     if (project.hasProperty('browser')) {
@@ -36,6 +39,9 @@ task testGroups(type: Test) {
     task testContacts(type: Test) {
         useTestNG(){
             suites 'src/test/resources/testng-contacts.xml'
+        }
+        if (project.hasProperty('platform')) {
+            systemProperty 'platform', "${platform}"
         }
 
         if (project.hasProperty('browser')) {
