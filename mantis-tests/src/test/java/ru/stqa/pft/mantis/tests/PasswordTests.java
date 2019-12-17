@@ -5,6 +5,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.lanwen.verbalregex.VerbalExpression;
 import ru.stqa.pft.mantis.model.MailMessage;
+import ru.stqa.pft.mantis.model.UserData;
 
 import java.io.IOException;
 import java.util.List;
@@ -20,20 +21,20 @@ public class PasswordTests extends TestBase {
 
     @Test
     public void testChangePassword() throws InterruptedException, IOException {
-        String username = "test1";
-        String email = "test1@localhost.localdomain";
+        UserData userData = app.db().users().iterator().next();
+
         String newPassword = "password1";
 
         app.userHelper().signUp(app.getProperty("web.adminLogin"), app.getProperty("web.adminPassword"));
 
-        app.userHelper().resetPasswordForUser(username);
+        app.userHelper().resetPasswordForUser(userData.getUsername());
 
         List<MailMessage> mailMessages = app.mail().waitForMail(1, 10000);
-        String confirmationLink = findConfirmationLink(mailMessages, email);
+        String confirmationLink = findConfirmationLink(mailMessages, userData.getEmail());
 
         app.userHelper().changePassword(confirmationLink, newPassword);
 
-        assertTrue(app.newSession().login(username, newPassword));
+        assertTrue(app.newSession().login(userData.getUsername(), newPassword));
     }
 
     private String findConfirmationLink(List<MailMessage> mailMessages, String email) {
