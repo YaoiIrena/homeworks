@@ -64,8 +64,8 @@
     <orderEntry type="library" name="Gradle: org.glassfish.jaxb:txw2:2.3.1" level="project" />
     <orderEntry type="library" name="Gradle: com.sun.istack:istack-commons-runtime:3.0.7" level="project" />
     <orderEntry type="library" name="Gradle: org.jvnet.staxex:stax-ex:1.8" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: javax.activation:activation:1.1" level="project" />
     <orderEntry type="library" name="Gradle: com.sun.xml.fastinfoset:FastInfoset:1.2.15" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: javax.activation:activation:1.1" level="project" />
     <orderEntry type="library" name="Gradle: org.aspectj:aspectjrt:1.7.4" level="project" />
     <orderEntry type="library" name="Gradle: ru.yandex.qatools.allure:allure-java-annotations:1.4.0.RC4" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.tika:tika-core:1.5" level="project" />
