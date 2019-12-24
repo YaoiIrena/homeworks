@@ -116,7 +116,7 @@
       <recent name="ru.stqa.pft.addressbook" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.GroupCreationTests.testGroupCreation">
+  <component name="RunManager" selected="TestNG.GroupTests">
     <configuration name="MyFirstProgram" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="C:/Program Files/Java/jdk1.8.0_221" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -191,24 +191,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AddDeleteContactTests.testDeleteContact" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="addressbook-web-tests.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.stqa.pft.addressbook.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.AddDeleteContactTests" />
-      <option name="METHOD_NAME" value="testDeleteContact" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="GroupCreationTests.testGroupCreation" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
@@ -221,6 +203,23 @@
       <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.GroupCreationTests" />
       <option name="METHOD_NAME" value="testGroupCreation" />
       <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GroupTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="addressbook-web-tests.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.pft.addressbook.bdd.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.bdd" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.bdd.GroupTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -265,19 +264,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.MyFirstProgram" />
-      <item itemvalue="TestNG.AddDeleteContactTests.testDeleteContact" />
       <item itemvalue="TestNG.AddDeleteContactTests.testAddContact" />
       <item itemvalue="TestNG.GroupCreationTests.testGroupCreation" />
       <item itemvalue="TestNG.PointTests.testPoint" />
       <item itemvalue="TestNG.SquareTests.testArea" />
+      <item itemvalue="TestNG.GroupTests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.GroupTests" />
         <item itemvalue="TestNG.GroupCreationTests.testGroupCreation" />
         <item itemvalue="TestNG.SquareTests.testArea" />
         <item itemvalue="TestNG.PointTests.testPoint" />
         <item itemvalue="TestNG.AddDeleteContactTests.testAddContact" />
-        <item itemvalue="TestNG.AddDeleteContactTests.testDeleteContact" />
       </list>
     </recent_temporary>
   </component>
@@ -325,10 +324,26 @@
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
-    <state x="710" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1577187252520">
+    <state x="710" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1577192222166">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="710" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577187252520" />
+    <state x="710" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577192222166" />
+    <state width="1877" height="257" key="GridCell.Tab.0.bottom" timestamp="1577195377860">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="257" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577195377860" />
+    <state width="1877" height="257" key="GridCell.Tab.0.center" timestamp="1577195377860">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="257" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577195377860" />
+    <state width="1877" height="257" key="GridCell.Tab.0.left" timestamp="1577195377860">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="257" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577195377860" />
+    <state width="1877" height="257" key="GridCell.Tab.0.right" timestamp="1577195377860">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="257" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577195377860" />
     <state x="655" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1577184497049">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
