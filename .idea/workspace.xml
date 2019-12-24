@@ -82,6 +82,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="extract.method.default.visibility" value="public" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/sandbox/src/main/java" />
@@ -324,10 +325,14 @@
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
-    <state x="655" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1577103880907">
+    <state x="710" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1577187252520">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="655" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577103880907" />
+    <state x="710" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577187252520" />
+    <state x="655" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1577184497049">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="655" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577184497049" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
